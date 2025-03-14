@@ -19,12 +19,17 @@
     "exports": {
         ".": "./src/index.js",
         "./aura": "./src/presets/aura/index.js",
+        "./haloe": "./src/presets/haloe/index.js",
         "./lara": "./src/presets/lara/index.js",
         "./material": "./src/presets/material/index.js",
         "./nora": "./src/presets/nora/index.js",
         "./aura/*": {
             "types": "./types/*/index.d.ts",
             "import": "./src/presets/aura/*/index.js"
+        },
+        "./haloe/*": {
+            "types": "./types/*/index.d.ts",
+            "import": "./src/presets/haloe/*/index.js"
         },
         "./lara/*": {
             "types": "./types/*/index.d.ts",
@@ -51,6 +56,10 @@
             "./aura/*": {
                 "types": "./types/*/index.d.ts",
                 "import": "./aura/*/index.mjs"
+            },
+            "./haloe/*": {
+                "types": "./types/*/index.d.ts",
+                "import": "./haloe/*/index.mjs"
             },
             "./lara/*": {
                 "types": "./types/*/index.d.ts",

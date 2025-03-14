@@ -55,12 +55,14 @@
 import EventBus from '@/app/AppEventBus';
 import { $t, updatePreset, updateSurfacePalette } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
+import Haloe from '@primeuix/themes/haloe';
 import Lara from '@primeuix/themes/lara';
 import Material from '@primeuix/themes/material';
 import Nora from '@primeuix/themes/nora';
 
 const presets = {
     Aura,
+    Haloe,
     Material,
     Lara,
     Nora
@@ -71,6 +73,7 @@ export default {
         return {
             presetOptions: [
                 { label: 'Aura', value: 'Aura' },
+                { label: 'Haloe', value: 'Haloe' },
                 { label: 'Material', value: 'Material' },
                 { label: 'Lara', value: 'Lara' },
                 { label: 'Nora', value: 'Nora' }
