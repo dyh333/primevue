@@ -1,5 +1,5 @@
 <template>
-    <ul :ref="containerRef" :class="cx('list')" v-bind="level === 0 ? ptm('list') : ptm('optionList')">
+    <ul :ref="containerRef" :class="[cx('list')]" v-bind="level === 0 ? ptm('list') : ptm('optionList')">
         <template v-for="(processedOption, index) of options" :key="getOptionLabelToRender(processedOption)">
             <li
                 :id="getOptionId(processedOption)"
@@ -39,6 +39,7 @@
                     v-if="isOptionGroup(processedOption) && isOptionActive(processedOption)"
                     role="group"
                     :class="cx('optionList')"
+                    :size="size"
                     :selectId="selectId"
                     :focusedOptionId="focusedOptionId"
                     :options="getOptionGroupChildren(processedOption)"
@@ -76,6 +77,7 @@ export default {
     container: null,
     props: {
         selectId: String,
+        size: String,
         focusedOptionId: String,
         options: Array,
         optionLabel: String,

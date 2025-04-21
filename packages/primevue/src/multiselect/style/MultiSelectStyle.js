@@ -42,7 +42,13 @@ const classes = {
     pcFilterContainer: 'p-multiselect-filter-container',
     pcFilter: 'p-multiselect-filter',
     listContainer: 'p-multiselect-list-container',
-    list: 'p-multiselect-list',
+    list: ({ props }) => [
+        'p-multiselect-list',
+        {
+            'p-multiselect-list-sm': props.size === 'small',
+            'p-multiselect-list-lg': props.size === 'large'
+        }
+    ],
     optionGroup: 'p-multiselect-option-group',
     option: ({ instance, option, index, getItemOptions, props }) => [
         'p-multiselect-option',

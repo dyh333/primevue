@@ -32,7 +32,13 @@ const classes = {
     header: 'p-select-header',
     pcFilter: 'p-select-filter',
     listContainer: 'p-select-list-container',
-    list: 'p-select-list',
+    list: ({ props }) => [
+			'p-select-list',
+			{
+					'p-select-list-sm': props.size === 'small',
+					'p-select-list-lg': props.size === 'large'
+			}
+    ],
     optionGroup: 'p-select-option-group',
     optionGroupLabel: 'p-select-option-group-label',
     option: ({ instance, props, state, option, focusedOption }) => [

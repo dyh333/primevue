@@ -40,7 +40,13 @@ const classes = {
         }
     ],
     listContainer: 'p-cascadeselect-list-container',
-    list: 'p-cascadeselect-list',
+    list: ({ props }) => [
+        'p-cascadeselect-list',
+        {
+            'p-cascadeselect-list-sm': props.size === 'small',
+            'p-cascadeselect-list-lg': props.size === 'large'
+        }
+    ],
     option: ({ instance, processedOption }) => [
         'p-cascadeselect-option',
         {

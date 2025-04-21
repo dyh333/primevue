@@ -60,6 +60,7 @@
                     <div :class="cx('listContainer')" v-bind="ptm('listContainer')">
                         <CascadeSelectSub
                             :id="$id + '_tree'"
+                            :size="size"
                             role="tree"
                             aria-orientation="horizontal"
                             :selectId="$id"
