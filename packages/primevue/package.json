@@ -337,7 +337,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
+        "build": "cross-env NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
         "build:package": "pnpm run build:prebuild && pnpm run build:api && rollup -c && pnpm run build:postbuild",
         "build:api": "node ./scripts/build-api.js",
         "build:prebuild": "node ./scripts/prebuild.mjs",
@@ -345,16 +345,21 @@
         "dev:link": "pnpm link --global && npm link",
         "test:unit": "vitest run",
         "test:unit:watch": "vitest watch",
-        "test:coverage": "vitest run --coverage"
+        "test:coverage": "vitest run --coverage",
+        "publish:haloe": "node ./scripts/publish-cmss.mjs",
+        "publish:haloe:test": "node ./scripts/publish-cmss.mjs test"
     },
     "devDependencies": {
         "@vue/test-utils": "^2.0.0",
-        "vitest": "^0.29.8"
+        "cross-env": "^7.0.3",
+        "vitest": "^0.29.8",
+        "yaml": "^2.7.1"
     },
     "dependencies": {
+        "@haloe/styles": "1.0.0",
         "@primeuix/styled": "catalog:",
-        "@primeuix/utils": "catalog:",
         "@primeuix/styles": "catalog:",
+        "@primeuix/utils": "catalog:",
         "@primevue/core": "workspace:*",
         "@primevue/icons": "workspace:*"
     },

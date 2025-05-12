@@ -2,9 +2,9 @@
 import '@primeuix/styles'; // When styles change, the app will hot reload.
 
 import { definePreset } from '@primeuix/themes';
-import Aura from '@primeuix/themes/aura';
+import Haloe from '@primeuix/themes/haloe';
 
-export const NoirPreset = definePreset(Aura, {
+export const NoirPreset = definePreset(Haloe, {
     semantic: {
         primary: {
             50: '{blue.50}',
@@ -22,9 +22,9 @@ export const NoirPreset = definePreset(Aura, {
         colorScheme: {
             light: {
                 primary: {
-                    color: '{primary.500}',
+                    color: '{primary.600}',
                     contrastColor: '#ffffff',
-                    hoverColor: '{primary.600}',
+                    hoverColor: '{primary.500}',
                     activeColor: '{primary.700}'
                 },
                 highlight: {
