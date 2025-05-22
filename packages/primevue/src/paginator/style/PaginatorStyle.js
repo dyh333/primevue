@@ -50,7 +50,8 @@ const classes = {
     current: 'p-paginator-current',
     pcRowPerPageDropdown: 'p-paginator-rpp-dropdown',
     pcJumpToPageDropdown: 'p-paginator-jtp-dropdown',
-    pcJumpToPageInputText: 'p-paginator-jtp-input'
+    pcJumpToPageInputText: 'p-paginator-jtp-input',
+    pcTotalRecords: 'p-paginator-total-records'
 };
 
 export default BaseStyle.extend({

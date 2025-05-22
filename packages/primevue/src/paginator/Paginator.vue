@@ -22,8 +22,23 @@
                 </div>
                 <div :class="cx('content')" v-bind="ptm('content')">
                     <template v-for="item in value" :key="item">
+                        <TotalRecords
+                            v-if="item === 'TotalRecords'"
+                            :totalRecords="totalRecords"
+                        />
+                        <RowsPerPageDropdown
+                            v-if="item === 'RowsPerPageDropdown' && rowsPerPageOptions"
+                            :aria-label="getAriaLabel('rowsPerPageLabel')"
+                            :rows="d_rows"
+                            :options="rowsPerPageOptions"
+                            @rows-change="onRowChange($event)"
+                            :disabled="empty"
+                            :templates="$slots"
+                            :unstyled="unstyled"
+                            :pt="pt"
+                        />
                         <FirstPageLink
-                            v-if="item === 'FirstPageLink'"
+                            v-else-if="item === 'FirstPageLink'"
                             :aria-label="getAriaLabel('firstPageLabel')"
                             :template="$slots.firsticon || $slots.firstpagelinkicon"
                             @click="changePageToFirst($event)"
@@ -72,17 +87,6 @@
                             :unstyled="unstyled"
                             :pt="pt"
                         />
-                        <RowsPerPageDropdown
-                            v-else-if="item === 'RowsPerPageDropdown' && rowsPerPageOptions"
-                            :aria-label="getAriaLabel('rowsPerPageLabel')"
-                            :rows="d_rows"
-                            :options="rowsPerPageOptions"
-                            @rows-change="onRowChange($event)"
-                            :disabled="empty"
-                            :templates="$slots"
-                            :unstyled="unstyled"
-                            :pt="pt"
-                        />
                         <JumpToPageDropdown
                             v-else-if="item === 'JumpToPageDropdown'"
                             :aria-label="getAriaLabel('jumpToPageDropdownLabel')"
@@ -117,6 +121,7 @@ import NextPageLink from './NextPageLink.vue';
 import PageLinks from './PageLinks.vue';
 import PrevPageLink from './PrevPageLink.vue';
 import RowsPerPageDropdown from './RowsPerPageDropdown.vue';
+import TotalRecords from './TotalRecords.vue';
 
 export default {
     name: 'Paginator',
@@ -265,7 +270,7 @@ export default {
                 keys = this.template;
 
                 if (!keys.default) {
-                    keys.default = 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown';
+                    keys.default = 'TotalRecords RowsPerPageDropdown FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink JumpToPageInput';
                 }
 
                 for (const item in keys) {
@@ -348,7 +353,8 @@ export default {
         PrevPageLink: PrevPageLink,
         RowsPerPageDropdown: RowsPerPageDropdown,
         JumpToPageDropdown: JumpToPageDropdown,
-        JumpToPageInput: JumpToPageInput
+        JumpToPageInput: JumpToPageInput,
+        TotalRecords: TotalRecords
     }
 };
 </script>

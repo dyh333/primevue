@@ -43,7 +43,7 @@ export default {
 
             if (this.options) {
                 for (let i = 0; i < this.options.length; i++) {
-                    opts.push({ label: String(this.options[i]), value: this.options[i] });
+                    opts.push({ label: `${String(this.options[i])}${this.$primevue.config.locale.page}`, value: this.options[i] });
                 }
             }
 

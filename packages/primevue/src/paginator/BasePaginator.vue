@@ -28,7 +28,7 @@ export default {
         },
         template: {
             type: [Object, String],
-            default: 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown'
+            default: 'TotalRecords RowsPerPageDropdown FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink JumpToPageInput'
         },
         currentPageReportTemplate: {
             type: null,

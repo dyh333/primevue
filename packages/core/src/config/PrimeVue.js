@@ -78,6 +78,12 @@ export const defaultOptions = {
         fileChosenMessage: '{0} files',
         noFileChosenMessage: 'No file chosen',
         emptyMessage: 'No available options',
+		goto: 'Goto',
+        p: '',
+        page: '/page',
+		item: 'item',
+        items: 'items',
+        total: 'Total',
         aria: {
             trueLabel: 'True',
             falseLabel: 'False',

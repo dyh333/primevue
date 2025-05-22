@@ -1,5 +1,7 @@
 <template>
-    <JTPInput ref="jtpInput" :modelValue="d_page" :class="cx('pcJumpToPageInputText')" :aria-label="inputArialabel" :disabled="disabled" @update:modelValue="onChange" :unstyled="unstyled" :pt="ptm('pcJumpToPageInputText')"></JTPInput>
+        <span style="margin-left: 12px; margin-right: 4px;">{{ $primevue.config.locale.goto }}</span>
+        <JTPInput ref="jtpInput" :modelValue="d_page" :class="cx('pcJumpToPageInputText')" :aria-label="inputArialabel" :disabled="disabled" @update:modelValue="onChange" :unstyled="unstyled" :pt="ptm('pcJumpToPageInputText')"></JTPInput>
+        <span style="margin-left: 4px;">{{ $primevue.config.locale.p }}</span>
 </template>
 
 <script>
