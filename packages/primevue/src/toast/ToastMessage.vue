@@ -22,8 +22,8 @@
 <script>
 import { cn } from '@primeuix/utils';
 import BaseComponent from '@primevue/core/basecomponent';
-import CheckIcon from '@primevue/icons/check';
-import ExclamationTriangleIcon from '@primevue/icons/exclamationtriangle';
+import CheckCircleIcon from '@primevue/icons/checkcircle';
+import ExclamationCircleIcon from '@primevue/icons/exclamationcircle';
 import InfoCircleIcon from '@primevue/icons/infocircle';
 import TimesIcon from '@primevue/icons/times';
 import TimesCircleIcon from '@primevue/icons/timescircle';
@@ -136,8 +136,8 @@ export default {
         iconComponent() {
             return {
                 info: !this.infoIcon && InfoCircleIcon,
-                success: !this.successIcon && CheckIcon,
-                warn: !this.warnIcon && ExclamationTriangleIcon,
+                success: !this.successIcon && CheckCircleIcon,
+                warn: !this.warnIcon && ExclamationCircleIcon,
                 error: !this.errorIcon && TimesCircleIcon
             }[this.message.severity];
         },
@@ -153,8 +153,8 @@ export default {
     components: {
         TimesIcon: TimesIcon,
         InfoCircleIcon: InfoCircleIcon,
-        CheckIcon: CheckIcon,
-        ExclamationTriangleIcon: ExclamationTriangleIcon,
+        CheckCircleIcon: CheckCircleIcon,
+        ExclamationCircleIcon: ExclamationCircleIcon,
         TimesCircleIcon: TimesCircleIcon
     },
     directives: {

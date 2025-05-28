@@ -1,0 +1,11 @@
+{
+    "main": "./ExclamationCircleIcon.vue",
+    "module": "./ExclamationCircleIcon.vue",
+    "types": "./ExclamationCircleIcon.d.ts",
+    "browser": {
+        "./sfc": "./ExclamationCircleIcon.vue"
+    },
+    "sideEffects": [
+        "*.vue"
+    ]
+}
