@@ -23,6 +23,10 @@ export enum ConfirmDialogClasses {
      */
     message = 'p-confirmdialog-message',
     /**
+     * Class name of the content element
+     */
+    content = 'p-confirmdialog-content',
+    /**
      * Class name of the reject button element
      */
     pcRejectButton = 'p-confirmdialog-reject-button',

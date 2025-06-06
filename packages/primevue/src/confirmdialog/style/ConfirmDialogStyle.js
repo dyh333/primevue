@@ -5,6 +5,7 @@ const classes = {
     root: 'p-confirmdialog',
     icon: 'p-confirmdialog-icon',
     message: 'p-confirmdialog-message',
+    content: 'p-confirmdialog-content',
     pcRejectButton: 'p-confirmdialog-reject-button',
     pcAcceptButton: 'p-confirmdialog-accept-button'
 };

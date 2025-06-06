@@ -37,11 +37,11 @@ export default {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
                 header: 'Confirmation',
-                icon: 'pi pi-exclamation-triangle',
+                icon: 'pi pi-exclamation-circle',
                 rejectProps: {
                     label: 'Cancel',
                     severity: 'secondary',
-                    outlined: true
+                    outlined: false
                 },
                 acceptProps: {
                     label: 'Save'
@@ -151,12 +151,13 @@ const confirm2 = () => {
         confirm1() {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
+                content: 'This is a custom content',
                 header: 'Confirmation',
-                icon: 'pi pi-exclamation-triangle',
+                icon: 'pi pi-exclamation-circle',
                 rejectProps: {
                     label: 'Cancel',
                     severity: 'secondary',
-                    outlined: true
+                    outlined: false
                 },
                 acceptProps: {
                     label: 'Save'

@@ -4,7 +4,9 @@
         role="alertdialog"
         :class="cx('root')"
         :modal="modal"
+        :showHeader="false"
         :header="header"
+        :closable="false"
         :blockScroll="blockScroll"
         :appendTo="appendTo"
         :position="position"
@@ -20,11 +22,14 @@
         </template>
         <template v-if="!$slots.container">
             <template v-if="!$slots.message">
-                <slot name="icon">
-                    <component v-if="$slots.icon" :is="$slots.icon" :class="cx('icon')" />
-                    <span v-else-if="confirmation.icon" :class="[confirmation.icon, cx('icon')]" v-bind="ptm('icon')" />
-                </slot>
-                <span :class="cx('message')" v-bind="ptm('message')">{{ message }}</span>
+                <div class="flex justify-start items-start gap-4" style="margin-top: 24px;">
+                    <slot name="icon">
+                        <component v-if="$slots.icon" :is="$slots.icon" :class="cx('icon')" />
+                        <span v-else-if="confirmation.icon" :class="[confirmation.icon, cx('icon')]" v-bind="ptm('icon')" />
+                    </slot>
+                    <span :class="[cx('message'), 'font-medium']" v-bind="ptm('message')">{{ message }}</span>
+                </div>
+                <div :class="cx('content')">{{ content }}</div>
             </template>
             <component v-else :is="$slots.message" :message="confirmation"></component>
         </template>
@@ -140,6 +145,9 @@ export default {
         },
         message() {
             return this.confirmation ? this.confirmation.message : null;
+        },
+        content() {
+            return this.confirmation ? this.confirmation.content : null;
         },
         blockScroll() {
             return this.confirmation ? this.confirmation.blockScroll : true;

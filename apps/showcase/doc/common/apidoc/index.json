@@ -16865,6 +16865,14 @@
                             "description": "Message of the confirmation."
                         },
                         {
+                            "name": "content",
+                            "optional": true,
+                            "readonly": false,
+                            "type": "string",
+                            "default": "",
+                            "description": "Content of the confirmation."
+                        },
+                        {
                             "name": "group",
                             "optional": true,
                             "readonly": false,
