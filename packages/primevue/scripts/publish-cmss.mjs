@@ -82,6 +82,11 @@ function processImportStatements(dir) {
         /import\s+(?:.*\s+from\s+)?['"]@primeuix\/styles(\/[^'"]*)?['"]/g,
         match => match.replace(/['"]@primeuix\/styles(\/[^'"]*)?['"]/, m => m.replace('@primeuix/styles', '@haloe/styles'))
       );
+      // 替换import语句中的'@primevue/icons'为'@haloe/icons'
+      updatedContent = updatedContent.replace(
+        /import\s+(?:.*\s+from\s+)?['"]@primevue\/icons(\/[^'"]*)?['"]/g,
+        match => match.replace(/['"]@primevue\/icons(\/[^'"]*)?['"]/, m => m.replace('@primevue/icons', '@haloe/icons'))
+      );
       
       if (content !== updatedContent) {
         log(`替换文件导入: ${fullPath}`);

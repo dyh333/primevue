@@ -66,6 +66,10 @@ export { default as CalendarIcon } from '@primevue/icons/calendar';
 export * from '@primevue/icons/check';
 export { default as CheckIcon } from '@primevue/icons/check';
 
+// CheckCircleIcon
+export * from '@primevue/icons/checkcircle';
+export { default as CheckCircleIcon } from '@primevue/icons/checkcircle';
+
 // ChevronDownIcon
 export * from '@primevue/icons/chevrondown';
 export { default as ChevronDownIcon } from '@primevue/icons/chevrondown';
@@ -81,6 +85,10 @@ export { default as ChevronRightIcon } from '@primevue/icons/chevronright';
 // ChevronUpIcon
 export * from '@primevue/icons/chevronup';
 export { default as ChevronUpIcon } from '@primevue/icons/chevronup';
+
+// ExclamationCircleIcon
+export * from '@primevue/icons/exclamationcircle';
+export { default as ExclamationCircleIcon } from '@primevue/icons/exclamationcircle';
 
 // ExclamationTriangleIcon
 export * from '@primevue/icons/exclamationtriangle';

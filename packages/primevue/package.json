@@ -357,6 +357,7 @@
     },
     "dependencies": {
         "@haloe/styles": "1.0.0",
+        "@haloe/icons": "4.3.1-ljgkwo",
         "@primeuix/styled": "catalog:",
         "@primeuix/styles": "catalog:",
         "@primeuix/utils": "catalog:",
